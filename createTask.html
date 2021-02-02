@@ -1,0 +1,178 @@
+<html>
+<center>
+    <head>
+      <title>Guess the Logo Game</title>
+      <script>
+            var pics = ["<img src='pokemon.png' width='300px' length='200px'>","<img src = 'timmy.png' width='17%' length='14%'>",
+                        "<img src = 'flash.png' width='14%' length='20%'>","<img src = 'jerry.png' width='16%' length='20%'>",
+                        "<img src = 'aang.png' width='21%' length='24%'>", "<img src = 'jessie.png' width='43%' length='33%'>",
+                        "<img src='lisa.png' width='13%' length='15%'>","<img src='finished.png' width='20%' length='22%'>"  ];
+            var solutions = ["Bulbasaur", "Timmy", "Flash", "Jerry", "Aang", "Jessie", "Lisa"];
+            var solutions2 = ["bulbasaur", "timmy", "flash", "jerry", "aang", "jessie", "lisa"];
+  //    var solutions3 = ["Buffalo wild wings", "Taco bell", "Pizza hut", "Dairy queen", "Wendy's", "Panera bread", "Chipotle"];
+            var answers = [];
+            var index = 0;
+            var score = 0;
+            var table = "";
+            function getUserAnswers()
+            {
+              answers[index] = document.getElementById('ans').value;
+              index = index + 1;
+              if(index >= 7)
+              {
+                checkAnswers();
+              }
+              document.getElementById('picture').innerHTML =pics[index];
+            }
+
+            function checkAnswers()
+            {
+              if(answers[0] == solutions[0] || answers[0] == solutions2[0]) // || answers[0] == solutions3[0])
+              {
+                score++;
+              }
+              if(answers[1] == solutions[1] || answers[1] == solutions2[1])// || answers[1] == solutions3[1])
+              {
+                score++;
+              }
+
+              if(answers[2] == solutions[2] || answers[2] == solutions2[2])// || answers[2] == solutions3[2])
+              {
+                score++;
+              }
+
+              if(answers[3] == solutions[3] || answers[3] == solutions2[3])// || answers[3] == solutions3[3])
+              {
+                score++;
+              }
+
+              if(answers[4] == solutions[4] || answers[4] == solutions2[4])// || answers[4] == solutions3[4])
+              {
+                score++;
+              }
+
+              if(answers[5] == solutions[5] || answers[5] == solutions2[5])// || answers[5] == solutions3[5])
+              {
+                score++;
+              }
+
+              if(answers[6] == solutions[6] || answers[6] == solutions2[6]) //|| answers[6] == solutions3[6])
+              {
+                score++;
+              }
+
+              displayResult();
+            }
+
+            function displayResult()
+            {
+              table = table + "Score:" + "&nbsp" + score + "/7" + "<br>" +
+                              "ANSWER 1 -- " + solutions[0] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[0] + "<br>" +
+                              "ANSWER 2 -- " + solutions[1] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[1] + "<br>" +
+                              "ANSWER 3 -- " + solutions[2] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[2] + "<br>" +
+                              "ANSWER 4 -- " + solutions[3] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[3] + "<br>" +
+                              "ANSWER 5 -- " + solutions[4] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[4] + "<br>" +
+                              "ANSWER 6 -- " + solutions[5] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[5] + "<br>" +
+                              "ANSWER 7 -- " + solutions[6] + "&nbsp &nbsp &nbsp &nbsp" + "YOUR ANSWER -- " + answers[6];
+              document.getElementById('display').innerHTML = table;
+              document.getElementById('again').style.visibility = "visible";
+            }
+
+            function reset()
+            {
+              score = 0;
+              table = "";
+              var target = 1;
+              for(var i=answers.length-1;i>=0; i--)
+            {
+              if(answers[i] == target)
+              {
+                answers.splice(i,1);
+              }
+            }
+              document.getElementById('display').innerHTML = table ;
+              document.getElementById('picture').innerHTML = pics[0];
+              document.getElementById('again').style.visibility = "hidden";
+              index = 0;
+            }
+
+            function hide()
+            {
+              document.getElementById('again').style.visibility = "hidden";
+            }
+      </script>
+      <style>
+        body{
+          background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/03/Picture-sunset-wallpaper-HD.jpg);
+          color: white;
+          font-family: monospace;
+          font-size: 20px;
+        }
+
+        script{
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        h2{
+          border: 5px solid LightBlue;
+          border-style: outset;
+          border-radius: 10px;
+          animation: mymove 5s infinite;
+          background: red;
+          font-size: 60px;
+          font-family: sans-serif;
+          margin: 20px 400px;
+        }
+
+        @keyframes mymove {
+          from {top: 0px; background-color: black;}
+          to {top: 200px; background-color: white;}
+          50% {color: black;}
+        }
+
+        #next{
+          font-size: 20px;
+        }
+
+        #next:hover{
+          background-color: purple;
+          color: white;
+          border-radius: 5px;
+          border: 2px solid crimson;
+        }
+
+        #again{
+          font-size: 20px;
+        }
+
+        #again:hover{
+          background-color: tomato;
+          color: black;
+          border-radius: 5px;
+          border: 2px solid lightblue;
+        }
+
+        #userAns
+          {
+              height:35px;
+              font-size:14pt;
+          }
+      </style>
+    </head>
+
+
+    <body onload="hide()">
+       <!--You Complete HTML-->
+       <h2>Guess the Logo!</h2>
+       <br><br>
+       <span id="picture"><img src="pokemon.png" width='300px' length='200px'></span>
+       <br><br>
+       <span id="display"></span>
+       <br><br>
+       <input id="ans" type="text" onfocus="this.value=''">
+       <input id="next" type="button" value="Next" onclick="getUserAnswers()">
+       <input id="again" type="button" value="Play Again" onload="hide()" onclick="reset()">
+    </body>
+</center>
+</html>
