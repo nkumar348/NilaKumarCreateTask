@@ -1,0 +1,69 @@
+<html>
+<center>
+  <head>
+    <title>Quiz Portion</title>
+
+    <script>
+
+    var answers = document.getElementsByName('choice');
+    var input= "";
+
+      function question1() {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+
+        if (input == "" ) {
+          document.getElementById('span').innerHTML = "Please select answer.";
+        } else if ( input == "Scripting" ) {
+          document.getElementById('span').innerHTML = 'Answer is correct!';
+        } else {
+          document.getElementById('span').innerHTML = 'Answer is wrong!';
+        }
+      }
+
+      function question2()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+
+        if (input == "" ) {
+          document.getElementById('span2').innerHTML = "Please select answer.";
+        } else if ( input == "Idaho" ) {
+          document.getElementById('span2').innerHTML = 'Answer is correct!';
+        } else {
+          document.getElementById('span2').innerHTML = 'Answer is wrong!';
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>USA States Quiz!</h1><br>
+
+      <h2>Question 1</h2>
+      <input type="radio" name="choice" value="Scripting"> Scripting
+      <input type="radio" name="choice" value="Programming"> Programming
+      <input type="radio" name="choice" value="Application"> Application
+      <input type="radio" name="choice" value="None of These"> None of These
+<br><br>
+    <input type="button" value="Submit Answer" onclick="question1()">
+    <br><br> <span id="span"></span>
+<br><br><hr><br><br>
+      <h2>Question 2</h2>
+      <input type="radio" name="choice" value="Montana"> Montana
+      <input type="radio" name="choice" value="Nevada"> Nevada
+      <input type="radio" name="choice" value="Nebraska"> Nebraska
+      <input type="radio" name="choice" value="Idaho"> Idaho
+<br><br>
+    <input type="button" value="Submit Answer" onclick="question2()">
+    <br><br> <span id="span2"></span>
+
+  </body>
+</center>
+</html>

@@ -1,0 +1,82 @@
+
+<html>
+<center>
+  <head>
+    <title>All About the US States</title>
+
+    <script>
+      var states1 = ["Washington","Oregon","California","Arizona","Nevada","Idaho","Montana","Wyoming","Utah","Colorado"];
+      var states2 = ["New Mexico","Texas","Oklahoma","Kansas","Nebraska","South Dakota","North Dakota","Minesota","Wisconsin","Illinois"];
+      var states3 = ["Iowa","Missouri","Arkansas","Louisiana","Mississippi","Tennessee","Kentucky","Michigan", "Indiana","Alabama"];
+      var states4 = ["Florida","Georgia","South Carolina","North Carolina","Virginia","West Virginia","Ohio","Maryland","Delaware","Pennsylvania"];
+      var states5 = ["New Jersey","New York","Connecticut","Rhode Island","Massachusetts","Vermont","New Hampshire","Maine","Alaska","Hawaii"];
+      var input = [];
+      var index = 0;
+
+      function factFinder()
+      {
+        input[index] = document.getElementById('input').value;
+        if(input[index] == states1[0])
+        {
+          document.getElementById('span').innerHTML = "Washington is the only state to be named after a president. <br><br> Washington produces more apples than any other state in the union. <br><br> Washington has more glaciers than the other 47 contiguous states combined.";
+        }
+        if(input[index] == states1[1])
+        {
+          document.getElementById('span').innerHTML = "Powell's Book store in Portland, Oregon, is the world's largest bookstore. <br><br> Crater Lake, located in Oregon, is one of the deepest lakes in the world (592 meters). <br><br> Oregon stands at number six among the most Bigfoot sighting places in the US.";
+        }
+        if(input[index] == states1[2])
+        {
+          document.getElementById('span').innerHTML = "The world's most massive tree and the largest living organism on the Earth is located in California. <br><br> California produces a whopping 80% of the world's almonds. <br><br> Death Valley in California is the largest US national park outside of Alaska.";
+        }
+        if(input[index] == states1[3])
+        {
+          document.getElementById('span').innerHTML = "Pheonix, the capital of Arizona, is the most populous state capital in the US. <br><br> Arizona hosts the best-preserved crater on Earth, the Barringer Crater. <br><br> Arizona has the two largest man-made lakes in the US -- Lake Mead and Lake Powell.";
+        }
+        if(input[index] == states1[4])
+        {
+          document.getElementById('span').innerHTML = "On November 4, 2017, an automobile sped along at 277.9 mph on Nevada State Route 160 and didn't even get a ticket. <br><br> Nevada was the first state to radify the 15th Amendment which gave African American men the right to vote.";
+        }
+        if(input[index] == states1[5])
+        {
+          document.getElementById('span').innerHTML = "Idaho grows nearly one-third of America's potatoes. <br><br> The capital building of Idaho is the only state capital that is kept warm using a renewable source of energy. <br><br> It is illigal to not smile in the town of Pocatello, Idaho.";
+        }
+        if(input[index] == states1[6])
+        {
+          document.getElementById('span').innerHTML = "The largest snowflake ever (15 inch diameter) observed was seen in Fort Keogh, Montana. <br><br> Montana is slightly bigger than Japan and is the largest landlocked state in the US. <br><br> There are more than 3000 named lakes and reservoirs in Montana.";
+        }
+
+      }
+    </script>
+
+    <style>
+      body{
+
+      }
+
+      #span{
+        font-size: 30px;
+        margin: 50px;
+        margin-right: 50px;
+      }
+
+      #input{
+        font-size: 20px;
+      }
+
+      #generate{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Find out some interesting facts about states in the USA!</h1>
+    <p>Type in the name of a state to find facts about it. "<br>" Then
+    <input id="input" type="text" onfocus="this.value=''">
+    <input id="generate" value="Find facts!" type="button" onclick="factFinder()">
+    <a href="extension.html" target="_blank">Test Your KNowledge</a>
+    <hr><br><br><br><br><br><br><br>
+    <span id="span"></span>
+  </body>
+</center>
+</html>
