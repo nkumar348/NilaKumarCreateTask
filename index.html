@@ -19,6 +19,8 @@
         if(input[index] == states1[0])
         {
           document.getElementById('span').innerHTML = "Washington is the only state to be named after a president. <br><br> Washington produces more apples than any other state in the union. <br><br> Washington has more glaciers than the other 47 contiguous states combined.";
+        } else if (input[index] == "") {
+          document.getElementById('span').innerHTML = "Please type in the name of a state. Make sure it is capitalized."
         }
         if(input[index] == states1[1])
         {
@@ -66,15 +68,29 @@
       #generate{
         font-size: 20px;
       }
+      .button {
+        border: none;
+        background-color: #e7e7e7;
+        color: black;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size:20px;
+    }
     </style>
   </head>
 
   <body>
     <h1>Find out some interesting facts about states in the USA!</h1>
-    <p>Type in the name of a state to find facts about it. "<br>" Then
+    <p>Type in the name of a state to find unique facts about it! <br> When you are done learning new facts, click the Test Your Knowledege button to take a quiz to see how well you remember your facts!</p>
     <input id="input" type="text" onfocus="this.value=''">
     <input id="generate" value="Find facts!" type="button" onclick="factFinder()">
-    <a href="extension.html" target="_blank">Test Your KNowledge</a>
+    <a class="button" href="extension.html" target="_blank">Test Your Knowledge</a>
     <hr><br><br><br><br><br><br><br>
     <span id="span"></span>
   </body>
