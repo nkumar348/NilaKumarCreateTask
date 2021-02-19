@@ -1,12 +1,14 @@
 <html>
 <center>
   <head>
-    <title>Quiz Portion</title>
+    <title>Test Your Knowledge!</title>
 
     <script>
 
     var answers = document.getElementsByName('choice');
-    var input= "";
+    var input = [];
+    var score = 0;
+    var table = "";
 
       function question1() {
         for (var i = 0, length = answers.length; i < length; i++) {
@@ -17,10 +19,13 @@
 
         if (input == "" ) {
           document.getElementById('span').innerHTML = "Please select answer.";
-        } else if ( input == "Scripting" ) {
+        } else if ( input == "Choice 1" ) {
           document.getElementById('span').innerHTML = 'Answer is correct!';
+          document.getElementById('span').style.backgroundColor = 'lightgreen';
+          score++;
         } else {
           document.getElementById('span').innerHTML = 'Answer is wrong!';
+          document.getElementById('span').style.backgroundColor = '#ff8566';
         }
       }
 
@@ -34,36 +39,302 @@
 
         if (input == "" ) {
           document.getElementById('span2').innerHTML = "Please select answer.";
-        } else if ( input == "Idaho" ) {
+        } else if ( input == "Choice 2" ) {
           document.getElementById('span2').innerHTML = 'Answer is correct!';
+          document.getElementById('span2').style.backgroundColor = 'lightgreen';
+          score++;
         } else {
           document.getElementById('span2').innerHTML = 'Answer is wrong!';
+          document.getElementById('span2').style.backgroundColor = '#ff8566';
         }
       }
+
+      function question3()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+
+        if (input == "" ) {
+          document.getElementById('span3').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 3" ) {
+          document.getElementById('span3').innerHTML = 'Answer is correct!';
+          document.getElementById('span3').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span3').innerHTML = 'Answer is wrong!';
+          document.getElementById('span3').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question4()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span4').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 4" ) {
+          document.getElementById('span4').innerHTML = 'Answer is correct!';
+          document.getElementById('span4').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span4').innerHTML = 'Answer is wrong!';
+          document.getElementById('span4').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question5()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span5').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 1" ) {
+          document.getElementById('span5').innerHTML = 'Answer is correct!';
+          document.getElementById('span5').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span5').innerHTML = 'Answer is wrong!';
+          document.getElementById('span5').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question6()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span6').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 2" ) {
+          document.getElementById('span6').innerHTML = 'Answer is correct!';
+          document.getElementById('span6').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span6').innerHTML = 'Answer is wrong!';
+          document.getElementById('span6').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question7()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span7').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 3" ) {
+          document.getElementById('span7').innerHTML = 'Answer is correct!';
+          document.getElementById('span7').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span7').innerHTML = 'Answer is wrong!';
+          document.getElementById('span7').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question8()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span8').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 4" ) {
+          document.getElementById('span8').innerHTML = 'Answer is correct!';
+          document.getElementById('span8').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span8').innerHTML = 'Answer is wrong!';
+          document.getElementById('span8').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question9()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span9').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 1" ) {
+          document.getElementById('span9').innerHTML = 'Answer is correct!';
+          document.getElementById('span9').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span9').innerHTML = 'Answer is wrong!';
+          document.getElementById('span9').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function question10()
+      {
+        for (var i = 0, length = answers.length; i < length; i++) {
+            if (answers[i].checked) {
+               input = answers[i].value;
+             }
+        }
+        if (input == "" ) {
+          document.getElementById('span10').innerHTML = "Please select answer.";
+        } else if ( input == "Choice 2" ) {
+          document.getElementById('span10').innerHTML = 'Answer is correct!';
+          document.getElementById('span10').style.backgroundColor = 'lightgreen';
+          score++;
+        } else {
+          document.getElementById('span10').innerHTML = 'Answer is wrong!';
+          document.getElementById('span10').style.backgroundColor = '#ff8566';
+        }
+      }
+
+      function displayScore()
+      {
+        table = table + "Score:" + "&nbsp" + score + "/10";
+        document.getElementById('score').innerHTML = table;
+        if (score<=5){
+          document.getElementById('feedback').innerHTML = "Revise your facts!!!";
+        } else if (score>=6){
+          document.getElementById('feedback').innerHTML = "Good job!!!";
+        }
+      }
+
     </script>
+
+    <style>
+      #score{
+        font-size: 20px;
+      }
+
+      #feedback{
+        font-size: 20px;
+      }
+    </style>
   </head>
 
   <body>
     <h1>USA States Quiz!</h1><br>
 
-      <h2>Question 1</h2>
-      <input type="radio" name="choice" value="Scripting"> Scripting
-      <input type="radio" name="choice" value="Programming"> Programming
-      <input type="radio" name="choice" value="Application"> Application
-      <input type="radio" name="choice" value="None of These"> None of These
-<br><br>
-    <input type="button" value="Submit Answer" onclick="question1()">
-    <br><br> <span id="span"></span>
-<br><br><hr><br><br>
-      <h2>Question 2</h2>
-      <input type="radio" name="choice" value="Montana"> Montana
-      <input type="radio" name="choice" value="Nevada"> Nevada
-      <input type="radio" name="choice" value="Nebraska"> Nebraska
-      <input type="radio" name="choice" value="Idaho"> Idaho
-<br><br>
-    <input type="button" value="Submit Answer" onclick="question2()">
-    <br><br> <span id="span2"></span>
+          <h2>Question 1</h2>
+          <input type="radio" name="choice" value="Choice 1" > Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question1()">
+        <br><br> <span id="span"></span>
 
+    <br><br><hr><br><br>
+          <h2>Question 2</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question2()">
+        <br><br> <span id="span2"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 3</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question3()">
+        <br><br> <span id="span3"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 4</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question4()">
+        <br><br> <span id="span4"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 5</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question5()">
+        <br><br> <span id="span5"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 6</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question6()">
+        <br><br> <span id="span6"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 7</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question7()">
+        <br><br> <span id="span7"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 8</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question8()">
+        <br><br> <span id="span8"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 9</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question9()">
+        <br><br> <span id="span9"></span>
+
+    <br><br><hr><br><br>
+          <h2>Question 10</h2>
+          <input type="radio" name="choice" value="Choice 1"> Choice 1
+          <input type="radio" name="choice" value="Choice 2"> Choice 2
+          <input type="radio" name="choice" value="Choice 3"> Choice 3
+          <input type="radio" name="choice" value="Choice 4"> Choice 4
+    <br><br>
+        <input type="button" value="Check Answer" onclick="question10()">
+        <br><br> <span id="span10"></span>
+
+    <br><br><hr><br><br>
+        <input type="button" value="View Results" onclick="displayScore()">
+        <br><br>
+        <span id="score"></span>
+        <br>
+        <span id="feedback"></span>
+        <br><br><br><br>
   </body>
 </center>
 </html>
