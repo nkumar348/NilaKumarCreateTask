@@ -5,217 +5,114 @@
 
     <script>
       var states1 = ["Washington","Oregon","California","Arizona","Nevada","Idaho","Montana","Wyoming","Utah","Colorado"];
+            var states1lower = ["washington","oregon","california","arizona","nevada","idaho","montana","wyoming","utah","colorado"];
+              var states1facts = ["Washington is the only state to be named after a president. <br><br> Washington produces more apples than any other state in the union. <br><br> Washington has more glaciers than the other 47 contiguous states combined.",
+                                  "Powell's Book store in Portland, Oregon, is the world's largest bookstore. <br><br> Crater Lake, located in Oregon, is one of the deepest lakes in the world (592 meters). <br><br> Oregon stands at number six among the most Bigfoot sighting places in the US.",
+                                  "The world's most massive tree and the largest living organism on the Earth is located in California. <br><br> California produces a whopping 80% of the world's almonds. <br><br> Death Valley in California is the largest US national park outside of Alaska.",
+                                  "Pheonix, the capital of Arizona, is the most populous state capital in the US. <br><br> Arizona hosts the best-preserved crater on Earth, the Barringer Crater. <br><br> Arizona has the two largest man-made lakes in the US -- Lake Mead and Lake Powell.",
+                                  "On November 4, 2017, an automobile sped along at 277.9 mph on Nevada State Route 160 and didn't even get a ticket. <br><br> Nevada was the first state to radify the 15th Amendment which gave African American men the right to vote. <br><br> Nevada is the national capital of nuclear testing.",
+                                  "Idaho grows nearly one-third of America's potatoes. <br><br> The capital building of Idaho is the only state capital that is kept warm using a renewable source of energy. <br><br> It is illigal to not smile in the town of Pocatello, Idaho.",
+                                  "The largest snowflake ever (15 inch diameter) observed was seen in Fort Keogh, Montana. <br><br> Montana is slightly bigger than Japan and is the largest landlocked state in the US. <br><br> There are more than 3000 named lakes and reservoirs in Montana.",
+                                  "Wyoming was the first state to give women the right to vote. <br><br> Wyoming leads the country in coal production in 1994 with 3 million tons per week. <br><br> Wyoming has the lowest lowest of all 50 United States.",
+                                  "The yearly average snowfall in the mountains near Salt Lake City, Utah is 500 inches. <br><br> Utah is the only state where every county contains some part of a national forest. <br><br> The Great Salt Lake is the greatest lake west of the Mississippi River."];
+
       var states2 = ["New Mexico","Texas","Oklahoma","Kansas","Nebraska","South Dakota","North Dakota","Minnesota","Wisconsin","Illinois"];
+            var states2lower = ["new mexico","texas","oklahoma","kansas","nebraska","south dakota","north dakota","minnesota","wisconsin","illinois"];
+              var states2facts = ["Taos Pueblo, in New Mexico, has been inhabited for over a thousand years. <br><br> New Mexico has more PhDs holders per capita than any other state in the country. <br><br> Santa Fe, the capital of New Mexico, was founded 10 years before the pilgrims landed at Plymouth.",
+                                  "Texas uses its own power grid, seperate from the rest of the United States. <br><br> The deadlist natural disaster in United States history, the Great Galveston Hurricane, occured in Texas. <br><br> A time capsule in Texas contains a passbook to a bank account expected to be worth $1 quadrillion by the time it opens in 2968.",
+                                  "In Bristow, Oklahoma it is against the law to serve water to a customer in a restaurant unless one peanut in a shell is also served. <br><br> In Tulsa, Oklahoma you may not open a soda bottle without the supervision of a licensed engineer. <br><br> Guthrie, Oklahoma has the nation's only museum devoted to the collection of lighters.",
+                                  "Kansas is ranked among the most patriotic states in the United States. <br><br> More casualties in the Civil War took place in Kansas than in any of the other states of the Union. <br><br> There is 528 caves located within the state lines of Kansas.",
+                                  "Nebraska is home to Archie, the biggest mammoth on display in the world. <br><br> Kool-Aid was invented in Hastings, Nebraska by Edwin E. Perkins in 1927. <br><br> Nebraska has the world's largest indoor rainforest in the Henry Doorly Zoo.",
+                                  "South Dakota has more shorelines that Florida. <br><br> In addition to Mount Rushmore, South Dakota has been carving a mountain sculpture of Lakota warrior Chief Crazy Horse since 1948. <br><br> The largest and biggest gold mine in the United States was discovered in Lead, South Dakota.",
+                                  "The world's largest hamburger was eaten in Rutland, North Dakota, weighing 3,591 pounds and over 8,000 people were invited to the meal. <br><br> North Dakota prodcues enough canola oil each year to fill the state capital's 19-story tower 19 times. <br><br> North Dakota has only one abortion clinic and has been rated as the worst state in the country for women.",
+                                  "There are 69,200 miles of rivers and streams in Minnesota which is enough to circle the equator 2 3/4 times. <br><br> Minnesota produces more turkey each year than there are the number of people in California. <br><br> In 2014, Minnesota produced 1.18 billion bushels of corn, the weight of over 90 Empire State Buildings.",
+                                  "The largest wooly mammoth to have ever been excavated was discovered in Kenosha, Wisconsin. <br><br> Wisconsin Dells boasts the most number of water parks in a single area in the whole world. <br><br> The Republican Party was founded in Ripon, Wisconsin.",
+                                  "Illinois was the first state to radify the 13th amendment to abolish slavery. <br><br> Illinois generates more nuclear power than any other state. <br><br> In Mount Pulaski, Illinois it is illgeal for boys to throw snowballs at trees."];
+
       var states3 = ["Iowa","Missouri","Arkansas","Louisiana","Mississippi","Tennessee","Kentucky","Michigan", "Indiana","Alabama"];
+            var states3lower = ["iowa","missouri","arkansas","louisiana","mississippi","tennessee","kentucky","michigan", "indiana","alabama"];
+              var states3facts = ["More than 25% of the state's electrcity comes from wind turbines. <br><br> There are more hogs than humans in Iowa (21.2 million hogs and 3 million humans). <br><br> At 99%, Iowa boasts the highest literacy rate in the nation and consistently scores among the highest in ACT and SAT scores.",
+                                  "Richland, Missouri is the only city in the US with a cave restaurant. <br><br> Missouri is home to the most destructive tornado in US history, the Tri-State tornado. <br><br> On December 16, 1811, and late April 1812, over two-thousand earthquake tremors occured on the Mississippi River valley.",
+                                  "Diamonds were first discovered in Arkansas by John W. Huddleston in 1906 where Crater of Diamonds State Park stands now. <br><br> It is strictly prohibited by law to mispronouce the state name (\"Ar-kan-saw\"). <br><br> In the early 20th century, ostrich racing was a popular sport at Cockburn's Ostrich Farm in Hot Springs, Arkansas.",
+                                  "At one time, the state of Louisiana was divided into countries. <br><br> Because of the state's low elevation, the dead are often laid to rest above ground instead of being buried. <br><br> The world's largest bridge over a body of water is the Lake Pontchartrain Causeway in Louisiana and stretched nearly 24 miles.",
+                                  "The famous hunting trip during which President Theodore Roosevelt refused to kill a bear, spawning the name \“Teddy Bears,\” took place in Mississippi. <br><br> National Geographic magazine is printed in Corith, Mississippi. <br><br> Mississippi has more churches per capita than any other state in the country.",
+                                  "Moutain Dew and Cotton Candy were invented in Tennessee. <br><br> There have been so many songs written about Tennessee that it has 10 official state songs. <br><br> The three stars on the Tennessee flag are meant to represent the three Grand Divisions of the state: East Tennessee, Middle Tennessee, and West Tennessee. <br><br> Martin Luthor King Jr. was assissinated at the Lorraine Motel in Memphis, Tennessee.",
+                                  "Technically Kentucky is not a state and is actually a commonwealth like Massachusetts, Pennsylvania, and Virginia. <br><br> Kentucky is home to a rare and breathtaking sight called the moonbow -- a rainbow made from light reflected off the moon. <br><br> Thomas Edison made the first major public display of his newly created incandescent light bulb in Kentucky.",
+                                  "Detroit, Michigan has its own currency -- Detroit \"Cheers\" come in denominations of $3 and feature the Spirit of Detroit monument. <br><br> No matter where you stand in Michigan, you will never be farther than 85 miles from one of the Great Lakes. <br><br> In Michigan, it is illegal to buy or sell a car on a Sunday.",
+                                  "The North Pole doesn't actually get any letters for Santa Claus, a town name Santa Claus in Indiana recieves those letters in the thousands every Christmas. <br><br> Baseball was practically born in Indiana where the first professional baseball occured. <br><br> The first train robbery occured in Jackson County in Indiana.",
+                                  "Alabama is the only state to have an alcoholic beverage as its official drink. <br><br> Anniston, Alabama is home to the World's Largest Office Chair, which is made from 10 tons of steel. <br><br> It is illegal to play dominoes in Alabama on Sundays."];
+
       var states4 = ["Florida","Georgia","South Carolina","North Carolina","Virginia","West Virginia","Ohio","Maryland","Delaware","Pennsylvania"];
+            var states4lower = ["florida","georgia","south carolina","north carolina","virginia","west virginia","ohio","maryland","delaware","pennsylvania"];
+              var states4facts = ["Flordia produces the most oranges and watermelons in America. <br><br> Florida’s largest river, the St. Johns River, is one of only a few major rivers that flow from south to north. <br><br> In terms of area, Jacksonville, Florida is the largest city in the United States.",
+                                  "Geogians have their own language and no one speaks the Georgian language besides Georgians. <br><br> Georgia is home to one of the oldest Jewish communities. <br><br> Georgia is the country's top producer of pecans, peanuts, and vidalia onions.",
+                                  "The first report of a life-sized lizard man was reported in South Carolina in 1988. <br><br> South Carolina was the first state to secede from the Union. <br><br> If you go to Marion, South Carolina and drink water from Catfish Creek, you'll become infatuated with the area and want to stay forever ... according the folklore.",
+                                  "The first mini-golf was built in Fayetteville, North Carolina. <br><br> North Carolina was the first state to declare independence from England. <br><br> North Carolina leads the country in furniture, tobacco, brick, and textile production.",
+                                  "Virginia was the country's largest slave-holding state. <br><br> Thanks to the Chesapeake Bay, the state is the the largest seafood producer on the Atlantic coast and the third largest in America. <br><br> Virginia was named after Queen Elizabeth I, who was called the Virgin Queen.",
+                                  "West Virginia holds the record for having the most towns named after cities in other countries, including Athens, Berlin, Cairo, Calcutta, Geneva and Shanghai. <br><br> In 1928, the Jones family of Peterstown, West Virginia discovered a 34-carat diamond on their property while playing horseshoes. <br><br> The first Mother’s Day celebration took place in 1908 in Grafton, West Virginia.",
+                                  "Seven presidents were born in Ohio, making the state known as the \"Mother of Modern Presidents\". <br><br> Agriculture is Ohio’s largest industry: it contributes over $93 billion to the economy annually. <br><br> The state flag of Ohio is unique in a particular way—it’s the only flag out of all 50 states' that isn’t rectangular.",
+                                  "The first hot air balloon in the US to carry a passenger launched from Baltimore, Maryland on June 23, 1784. <br><br> The first Ouija board was invented in Baltimore in an apartment that is now a 7-Eleven. <br><br> The first-ever six-pack of beer was sold in Maryland by the National Brewing Company.",
+                                  "Delaware was the first state to ratify the Constitution on December 7, 1787, five days before any other province or colony. <br><br> Delaware enjoys the fastest Internet speeds in the country, with connection speeds higher than every other country observed with the exception of South Korea. <br><br> An insect species, the Bethany Beach firefly, can only be found in Delaware.",
+                                  "The first baseball stadium was built in Pittsburgh, Pennsylvania in 1909. <br><br> Benjamin Franklin inaugurated the country’s first public zoo in Philadelphia. <br><br> The nation’s first hospital was the Philadelphia Hospital."];
+
       var states5 = ["New Jersey","New York","Connecticut","Rhode Island","Massachusetts","Vermont","New Hampshire","Maine","Alaska","Hawaii"];
+            var states5lower = ["new jersey","new york","connecticut","rhode island","massachusetts","vermont","new hampshire","maine","alaska","hawaii"];
+              var states5facts = ["New Jersey has the highest population density of any state in the US. <br><br> Beemerville, New Jersey is home to a volcano. <br><br> New Jersey has the most diners in the world and is often referred to as the \"Diner Capital of the World\".",
+                                  "New York was the first state to require people to use license plates on vehicles. <br><br> New York City, New York, is the most linguistically diverse city with over 800 languages spoken, and 4 in 10 households speak a language other than English. <br><br> Lake Placid, New York, is the only US city to have hosted the Winter Olympics twice, first in 1932 and again in 1980.",
+                                  "In 1901, the first law regulating the speed of a motor vehicle was imposed in Connecticut. <br><br> The world’s first nuclear submarine–USS Nautilus (SSN-571)—was constructed in Groton, Connecticut, between 1952 and 1954. <br><br> Connecticut has the highest personal income per capita (more than $70,000) in the country.",
+                                  "It’s the only state that still celebrates Victory Day, the day when World War II ended. <br><br> Rhode Island is home to America’s first indoor shopping mall. <br><br> Rhode Island has the longest official name of any state, the \"State of Rhode Island and Providence Plantations\".",
+                                  "While the first zip code in the world is in Germany, the first of the Uinted States is in Agawam, Massachusetts. <br><br> Way back in 1659, Boston, Massachusetts passed a law that outlawed the celebration of Christmas. <br><br> On March 10, 1876, it was in Boston that the first telephone call was made when Alexander Graham Bell summoned his lab assistant, Thomas A. Watson. <br><br> Massachusetts has one of the lowest divorce rates among the US states.",
+                                  "Vermont is the largest producer of maple syrup in the US, producing over 500,000 gallons a year. <br><br> Vermont is the least religious state in the US. <br><br> Before Vermont became the 14th state, it existed as an independent nation for 14 years.",
+                                  "New Hampshire’s Mount Washington is one the windiest places on Earth (as high as 231 miles an hour). <br><br> New Hampshire is the only state where seatbelts are not mandatory. <br><br> The first potato grown in the United States was planted in New Hampshire in 1719.",
+                                  "It would take you over 9 years to visit all of Maine's islands. <br><br> Maine's coldest day meant temperatures of -50°F in January of 2009. <br><br> Maine has its own desert, which spans 40 acres outside the town of Freeport.",
+                                  "About 52% of Alaskans are men -- the highest percentage of any state. <br><br> Alaska contains more than 100 volcanoes and volcanic fields which have been active within the last two million years. <br><br> The largest salmon caught in Alaska was on the Kenai River and weighed 97.5 pounds.",
+                                  "The Hawaiian alphabet has 12 letters. <br><br> Hawaiians greet with a hug and not a handshake. <br><br> Hawaii is one of only two US states where all forms of gambling are illegal."];
       var input = [];
       var index = 0;
 
       function factFinder()
       {
+
         input[index] = document.getElementById('input').value;
-        if(input[index] == states1[0])
+
+        for(var i = 0; i<states1facts.length; i++)
         {
-          document.getElementById('span').innerHTML = "Washington is the only state to be named after a president. <br><br> Washington produces more apples than any other state in the union. <br><br> Washington has more glaciers than the other 47 contiguous states combined.";
-        } else if (input[index] == "") {
-          document.getElementById('span').innerHTML = "Please type in the name of a state. Make sure it is capitalized."
+          if(input[index] == states1[i] || input[index] == states1lower[i])
+          {
+            document.getElementById('span').innerHTML = states1facts[i];
+          }
         }
-        if(input[index] == states1[1])
+
+        for(var i = 0; i<states2facts.length; i++)
         {
-          document.getElementById('span').innerHTML = "Powell's Book store in Portland, Oregon, is the world's largest bookstore. <br><br> Crater Lake, located in Oregon, is one of the deepest lakes in the world (592 meters). <br><br> Oregon stands at number six among the most Bigfoot sighting places in the US.";
+          if(input[index] == states2[i] || input[index] == states2lower[i])
+          {
+            document.getElementById('span').innerHTML = states2facts[i];
+          }
         }
-        if(input[index] == states1[2])
+
+        for(var i = 0; i<states3facts.length; i++)
         {
-          document.getElementById('span').innerHTML = "The world's most massive tree and the largest living organism on the Earth is located in California. <br><br> California produces a whopping 80% of the world's almonds. <br><br> Death Valley in California is the largest US national park outside of Alaska.";
+          if(input[index] == states3[i] || input[index] == states3lower[i])
+          {
+            document.getElementById('span').innerHTML = states3facts[i];
+          }
         }
-        if(input[index] == states1[3])
+
+        for(var i = 0; i<states4facts.length; i++)
         {
-          document.getElementById('span').innerHTML = "Pheonix, the capital of Arizona, is the most populous state capital in the US. <br><br> Arizona hosts the best-preserved crater on Earth, the Barringer Crater. <br><br> Arizona has the two largest man-made lakes in the US -- Lake Mead and Lake Powell.";
+          if(input[index] == states4[i] || input[index] == states4lower[i])
+          {
+            document.getElementById('span').innerHTML = states4facts[i];
+          }
         }
-        if(input[index] == states1[4])
+
+        for(var i = 0; i<states5facts.length; i++)
         {
-          document.getElementById('span').innerHTML = "On November 4, 2017, an automobile sped along at 277.9 mph on Nevada State Route 160 and didn't even get a ticket. <br><br> Nevada was the first state to radify the 15th Amendment which gave African American men the right to vote. <br><br> Nevada is the national capital of nuclear testing.";
-        }
-        if(input[index] == states1[5])
-        {
-          document.getElementById('span').innerHTML = "Idaho grows nearly one-third of America's potatoes. <br><br> The capital building of Idaho is the only state capital that is kept warm using a renewable source of energy. <br><br> It is illigal to not smile in the town of Pocatello, Idaho.";
-        }
-        if(input[index] == states1[6])
-        {
-          document.getElementById('span').innerHTML = "The largest snowflake ever (15 inch diameter) observed was seen in Fort Keogh, Montana. <br><br> Montana is slightly bigger than Japan and is the largest landlocked state in the US. <br><br> There are more than 3000 named lakes and reservoirs in Montana.";
-        }
-        if(input[index] == states1[7])
-        {
-          document.getElementById('span').innerHTML = "Wyoming was the first state to give women the right to vote. <br><br> Wyoming leads the country in coal production in 1994 with 3 million tons per week. <br><br> Wyoming has the lowest lowest of all 50 United States.";
-        }
-        if(input[index] == states1[8])
-        {
-          document.getElementById('span').innerHTML = "The yearly average snowfall in the mountains near Salt Lake City, Utah is 500 inches. <br><br> Utah is the only state where every county contains some part of a national forest. <br><br> The Great Salt Lake is the greatest lake west of the Mississippi River.";
-        }
-        if(input[index] == states1[9])
-        {
-          document.getElementById('span').innerHTML = "Colorado contains the Four Corners Monument where you can stand in 4 states at once: Colorado, Arizona, New Mexico, and Utah at the same time. <br><br> The country's highest suspension bridge, the Royal Gorge Bridge, is located in Colorado. <br><br> Colorado is the only state in history to turn down the Olympics.";
-        }
-        if(input[index] == states2[0])
-        {
-          document.getElementById('span').innerHTML = "Taos Pueblo, in New Mexico, has been inhabited for over a thousand years. <br><br> New Mexico has more PhDs holders per capita than any other state in the country. <br><br> Santa Fe, the capital of New Mexico, was founded 10 years before the pilgrims landed at Plymouth.";
-        }
-        if(input[index] == states2[1])
-        {
-          document.getElementById('span').innerHTML = "Texas uses its own power grid, seperate from the rest of the United States. <br><br> The deadlist natural disaster in United States history, the Great Galveston Hurricane, occured in Texas. <br><br> A time capsule in Texas contains a passbook to a bank account expected to be worth $1 quadrillion by the time it opens in 2968.";
-        }
-        if(input[index] == states2[2])
-        {
-          document.getElementById('span').innerHTML = "In Bristow, Oklahoma it is against the law to serve water to a customer in a restaurant unless one peanut in a shell is also served. <br><br> In Tulsa, Oklahoma you may not open a soda bottle without the supervision of a licensed engineer. <br><br> Guthrie, Oklahoma has the nation's only museum devoted to the collection of lighters.";
-        }
-        if(input[index] == states2[3])
-        {
-          document.getElementById('span').innerHTML = "Kansas is ranked among the most patriotic states in the United States. <br><br> More casualties in the Civil War took place in Kansas than in any of the other states of the Union. <br><br> There is 528 caves located within the state lines of Kansas.";
-        }
-        if(input[index] == states2[4])
-        {
-          document.getElementById('span').innerHTML = "Nebraska is home to Archie, the biggest mammoth on display in the world. <br><br> Kool-Aid was invented in Hastings, Nebraska by Edwin E. Perkins in 1927. <br><br> Nebraska has the world's largest indoor rainforest in the Henry Doorly Zoo.";
-        }
-        if(input[index] == states2[5])
-        {
-          document.getElementById('span').innerHTML = "South Dakota has more shorelines that Florida. <br><br> In addition to Mount Rushmore, South Dakota has been carving a mountain sculpture of Lakota warrior Chief Crazy Horse since 1948. <br><br> The largest and biggest gold mine in the United States was discovered in Lead, South Dakota.";
-        }
-        if(input[index] == states2[6])
-        {
-          document.getElementById('span').innerHTML = "The world's largest hamburger was eaten in Rutland, North Dakota, weighing 3,591 pounds and over 8,000 people were invited to the meal. <br><br> North Dakota prodcues enough canola oil each year to fill the state capital's 19-story tower 19 times. <br><br> North Dakota has only one abortion clinic and has been rated as the worst state in the country for women.";
-        }
-        if(input[index] == states2[7])
-        {
-          document.getElementById('span').innerHTML = "There are 69,200 miles of rivers and streams in Minnesota which is enough to circle the equator 2 3/4 times. <br><br> Minnesota produces more turkey each year than there are the number of people in California. <br><br> In 2014, Minnesota produced 1.18 billion bushels of corn, the weight of over 90 Empire State Buildings.";
-        }
-        if(input[index] == states2[8])
-        {
-          document.getElementById('span').innerHTML = "The largest wooly mammoth to have ever been excavated was discovered in Kenosha, Wisconsin. <br><br> Wisconsin Dells boasts the most number of water parks in a single area in the whole world. <br><br> The Republican Party was founded in Ripon, Wisconsin.";
-        }
-        if(input[index] == states2[9])
-        {
-          document.getElementById('span').innerHTML = "Illinois was the first state to radify the 13th amendment to abolish slavery. <br><br> Illinois generates more nuclear power than any other state. <br><br> In Mount Pulaski, Illinois it is illgeal for boys to throw snowballs at trees.";
-        }
-        if(input[index] == states3[0])
-        {
-          document.getElementById('span').innerHTML = "More than 25% of the state's electrcity comes from wind turbines. <br><br> There are more hogs than humans in Iowa (21.2 million hogs and 3 million humans). <br><br> At 99%, Iowa boasts the highest literacy rate in the nation and consistently scores among the highest in ACT and SAT scores.";
-        }
-        if(input[index] == states3[1])
-        {
-          document.getElementById('span').innerHTML = "Richland, Missouri is the only city in the US with a cave restaurant. <br><br> Missouri is home to the most destructive tornado in US history, the Tri-State tornado. <br><br> On December 16, 1811, and late April 1812, over two-thousand earthquake tremors occured on the Mississippi River valley.";
-        }
-        if(input[index] == states3[2])
-        {
-          document.getElementById('span').innerHTML = "Diamonds were first discovered in Arkansas by John W. Huddleston in 1906 where Crater of Diamonds State Park stands now. <br><br> It is strictly prohibited by law to mispronouce the state name (\"Ar-kan-saw\"). <br><br> In the early 20th century, ostrich racing was a popular sport at Cockburn's Ostrich Farm in Hot Springs, Arkansas.";
-        }
-        if(input[index] == states3[3])
-        {
-          document.getElementById('span').innerHTML = "At one time, the state of Louisiana was divided into countries. <br><br> Because of the state's low elevation, the dead are often laid to rest above ground instead of being buried. <br><br> The world's largest bridge over a body of water is the Lake Pontchartrain Causeway in Louisiana and stretched nearly 24 miles.";
-        }
-        if(input[index] == states3[4])
-        {
-          document.getElementById('span').innerHTML = "The famous hunting trip during which President Theodore Roosevelt refused to kill a bear, spawning the name \“Teddy Bears,\” took place in Mississippi. <br><br> National Geographic magazine is printed in Corith, Mississippi. <br><br> Mississippi has more churches per capita than any other state in the country.";
-        }
-        if(input[index] == states3[5])
-        {
-          document.getElementById('span').innerHTML = "Moutain Dew and Cotton Candy were invented in Tennessee. <br><br> There have been so many songs written about Tennessee that it has 10 official state songs. <br><br> The three stars on the Tennessee flag are meant to represent the three Grand Divisions of the state: East Tennessee, Middle Tennessee, and West Tennessee. <br><br> Martin Luthor King Jr. was assissinated at the Lorraine Motel in Memphis, Tennessee.";
-        }
-        if(input[index] == states3[6])
-        {
-          document.getElementById('span').innerHTML = "Technically Kentucky is not a state and is actually a commonwealth like Massachusetts, Pennsylvania, and Virginia. <br><br> Kentucky is home to a rare and breathtaking sight called the moonbow -- a rainbow made from light reflected off the moon. <br><br> Thomas Edison made the first major public display of his newly created incandescent light bulb in Kentucky.";
-        }
-        if(input[index] == states3[7])
-        {
-          document.getElementById('span').innerHTML = "Detroit, Michigan has its own currency -- Detroit \"Cheers\" come in denominations of $3 and feature the Spirit of Detroit monument. <br><br> No matter where you stand in Michigan, you will never be farther than 85 miles from one of the Great Lakes. <br><br> In Michigan, it is illegal to buy or sell a car on a Sunday.";
-        }
-        if(input[index] == states3[8])
-        {
-          document.getElementById('span').innerHTML = "The North Pole doesn't actually get any letters for Santa Claus, a town name Santa Claus in Indiana recieves those letters in the thousands every Christmas. <br><br> Baseball was practically born in Indiana where the first professional baseball occured. <br><br> The first train robbery occured in Jackson County in Indiana.";
-        }
-        if(input[index] == states3[9])
-        {
-          document.getElementById('span').innerHTML = "Alabama is the only state to have an alcoholic beverage as its official drink. <br><br> Anniston, Alabama is home to the World's Largest Office Chair, which is made from 10 tons of steel. <br><br> It is illegal to play dominoes in Alabama on Sundays.";
-        }
-        if(input[index] == states4[0])
-        {
-          document.getElementById('span').innerHTML = "Flordia produces the most oranges and watermelons in America. <br><br> Florida’s largest river, the St. Johns River, is one of only a few major rivers that flow from south to north. <br><br> In terms of area, Jacksonville, Florida is the largest city in the United States."
-        }
-        if(input[index] == states4[1])
-        {
-          document.getElementById('span').innerHTML = "Geogians have their own language and no one speaks the Georgian language besides Georgians. <br><br> Georgia is home to one of the oldest Jewish communities. <br><br> Georgia is the country's top producer of pecans, peanuts, and vidalia onions.";
-        }
-        if(input[index] == states4[2])
-        {
-          document.getElementById('span').innerHTML = "The first report of a life-sized lizard man was reported in South Carolina in 1988. <br><br> South Carolina was the first state to secede from the Union. <br><br> If you go to Marion, South Carolina and drink water from Catfish Creek, you'll become infatuated with the area and want to stay forever ... according the folklore.";
-        }
-        if(input[index] == states4[3])
-        {
-          document.getElementById('span').innerHTML = "The first mini-golf was built in Fayetteville, North Carolina. <br><br> North Carolina was the first state to declare independence from England. <br><br> North Carolina leads the country in furniture, tobacco, brick, and textile production.";
-        }
-        if(input[index] == states4[4])
-        {
-          document.getElementById('span').innerHTML = "Virginia was the country's largest slave-holding state. <br><br> Thanks to the Chesapeake Bay, the state is the the largest seafood producer on the Atlantic coast and the third largest in America. <br><br> Virginia was named after Queen Elizabeth I, who was called the Virgin Queen.";
-        }
-        if(input[index] == states4[5])
-        {
-          document.getElementById('span').innerHTML = "West Virginia holds the record for having the most towns named after cities in other countries, including Athens, Berlin, Cairo, Calcutta, Geneva and Shanghai. <br><br> In 1928, the Jones family of Peterstown, West Virginia discovered a 34-carat diamond on their property while playing horseshoes. <br><br> The first Mother’s Day celebration took place in 1908 in Grafton, West Virginia.";
-        }
-        if(input[index] == states4[6])
-        {
-          document.getElementById('span').innerHTML = "Seven presidents were born in Ohio, making the state known as the \"Mother of Modern Presidents\". <br><br> Agriculture is Ohio’s largest industry: it contributes over $93 billion to the economy annually. <br><br> The state flag of Ohio is unique in a particular way—it’s the only flag out of all 50 states' that isn’t rectangular.";
-        }
-        if(input[index] == states4[7])
-        {
-          document.getElementById('span').innerHTML = "The first hot air balloon in the US to carry a passenger launched from Baltimore, Maryland on June 23, 1784. <br><br> The first Ouija board was invented in Baltimore in an apartment that is now a 7-Eleven. <br><br> The first-ever six-pack of beer was sold in Maryland by the National Brewing Company.";
-        }
-        if(input[index] == states4[8])
-        {
-          document.getElementById('span').innerHTML = "Delaware was the first state to ratify the Constitution on December 7, 1787, five days before any other province or colony. <br><br> Delaware enjoys the fastest Internet speeds in the country, with connection speeds higher than every other country observed with the exception of South Korea. <br><br> An insect species, the Bethany Beach firefly, can only be found in Delaware.";
-        }
-        if(input[index] == states4[9])
-        {
-          document.getElementById('span').innerHTML = "The first baseball stadium was built in Pittsburgh, Pennsylvania in 1909. <br><br> Benjamin Franklin inaugurated the country’s first public zoo in Philadelphia. <br><br> The nation’s first hospital was the Philadelphia Hospital.";
-        }
-        if(input[index] == states5[0])
-        {
-          document.getElementById('span').innerHTML = "New Jersey has the highest density population of any state in the US. <br><br> Beemerville, New Jersey is home to a volcano. <br><br> New Jersey has the most diners in the world and is often referred to as the \"Diner Capital of the World\".";
-        }
-        if(input[index] == states5[1])
-        {
-          document.getElementById('span').innerHTML = "New York was the first state to require people to use license plates on vehicles. <br><br> New York City, New York, is the most linguistically diverse city with over 800 languages spoken, and 4 in 10 households speak a language other than English. <br><br> Lake Placid, New York, is the only US city to have hosted the Winter Olympics twice, first in 1932 and again in 1980.";
-        }
-        if(input[index] == states5[2])
-        {
-          document.getElementById('span').innerHTML = "In 1901, the first law regulating the speed of a motor vehicle was imposed in Connecticut. <br><br> The world’s first nuclear submarine–USS Nautilus (SSN-571)—was constructed in Groton, Connecticut, between 1952 and 1954. <br><br> Connecticut has the highest personal income per capita (more than $70,000) in the country.";
-        }
-        if(input[index] == states5[3])
-        {
-          document.getElementById('span').innerHTML = "It’s the only state that still celebrates Victory Day, the day when World War II ended. <br><br> Rhode Island is home to America’s first indoor shopping mall. <br><br> Rhode Island has the longest official name of any state, the \"State of Rhode Island and Providence Plantations\".";
-        }
-        if(input[index] == states5[4])
-        {
-          document.getElementById('span').innerHTML = "While the first zip code in the world is in Germany, the first of the Uinted States is in Agawam, Massachusetts. <br><br> Way back in 1659, Boston, Massachusetts passed a law that outlawed the celebration of Christmas. <br><br> On March 10, 1876, it was in Boston that the first telephone call was made when Alexander Graham Bell summoned his lab assistant, Thomas A. Watson. <br><br> Massachusetts has one of the lowest divorce rates among the US states.";
-        }
-        if(input[index] == states5[5])
-        {
-          document.getElementById('span').innerHTML = "Vermont is the largest producer of maple syrup in the US, producing over 500,000 gallons a year. <br><br> Vermont is the least religious state in the US. <br><br> Before Vermont became the 14th state, it existed as an independent nation for 14 years.";
-        }
-        if(input[index] == states5[6])
-        {
-          document.getElementById('span').innerHTML = "New Hampshire’s Mount Washington is one the windiest places on Earth (as high as 231 miles an hour). <br><br> New Hampshire is the only state where seatbelts are not mandatory. <br><br> The first potato grown in the United States was planted in New Hampshire in 1719.";
-        }
-        if(input[index] == states5[7])
-        {
-          document.getElementById('span').innerHTML = "It would take you over 9 years to visit all of Maine's islands. <br><br> Maine's coldest day meant temperatures of -50°F in January of 2009. <br><br> Maine has its own desert, which spans 40 acres outside the town of Freeport.";
-        }
-        if(input[index] == states5[8])
-        {
-          document.getElementById('span').innerHTML = "About 52% of Alaskans are men -- the highest percentage of any state. <br><br> Alaska contains more than 100 volcanoes and volcanic fields which have been active within the last two million years. <br><br> The largest salmon caught in Alaska was on the Kenai River and weighed 97.5 pounds.";
-        }
-        if(input[index] == states5[9])
-        {
-          document.getElementById('span').innerHTML = "The Hawaiian alphabet has 12 letters. <br><br> Hawaiians greet with a hug and not a handshake. <br><br> Hawaii is one of only two US states where all forms of gambling are illegal.";
+          if(input[index] == states5[i] || input[index] == states5lower[i])
+          {
+            document.getElementById('span').innerHTML = states5facts[i];
+          }
         }
       }
     </script>
@@ -225,24 +122,24 @@
       body{
         background-image: url(https://www.xmple.com/wallpaper/linear-red-blue-gradient-1920x1080-c2-cd5c5c-1e90ff-a-90-f-14.svg); */
         background-size: cover;
-        color: black;
+        color: white;
       }
 
       #title{
         font-family: Tahoma,Verdana,sans-serif;
         font-size: 40px;
-        border: 3px solid black;
+        border: 3px solid white;
         border-style: outset;
         border-radius: 10px;
-        margin: 20px 185px;
-        background-color: white;
+        margin: 20px 170px;
+        background-color: black;
         animation: mymove 5s infinite;
       }
 
       @keyframes mymove {
-        50% {background-color: black;}
-        50% {color: white;}
-        50% {border-color: white;}
+        50% {background-color: white;}
+        50% {color: black;}
+        50% {border-color: black;}
       }
 
       p{
