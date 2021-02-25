@@ -14,7 +14,8 @@
                                   "Idaho grows nearly one-third of America's potatoes. <br><br> The capital building of Idaho is the only state capital that is kept warm using a renewable source of energy. <br><br> It is illigal to not smile in the town of Pocatello, Idaho.",
                                   "The largest snowflake ever (15 inch diameter) observed was seen in Fort Keogh, Montana. <br><br> Montana is slightly bigger than Japan and is the largest landlocked state in the US. <br><br> There are more than 3000 named lakes and reservoirs in Montana.",
                                   "Wyoming was the first state to give women the right to vote. <br><br> Wyoming leads the country in coal production in 1994 with 3 million tons per week. <br><br> Wyoming has the lowest lowest of all 50 United States.",
-                                  "The yearly average snowfall in the mountains near Salt Lake City, Utah is 500 inches. <br><br> Utah is the only state where every county contains some part of a national forest. <br><br> The Great Salt Lake is the greatest lake west of the Mississippi River."];
+                                  "The yearly average snowfall in the mountains near Salt Lake City, Utah is 500 inches. <br><br> Utah is the only state where every county contains some part of a national forest. <br><br> The Great Salt Lake is the greatest lake west of the Mississippi River.",
+                                  "Colorado contains the Four Corners Monument where you can stand in 4 states at once: Colorado, Arizona, New Mexico, and Utah at the same time. <br><br> The country's highest suspension bridge, the Royal Gorge Bridge, is located in Colorado. <br><br> Colorado is the only state in history to turn down the Olympics."];
 
       var states2 = ["New Mexico","Texas","Oklahoma","Kansas","Nebraska","South Dakota","North Dakota","Minnesota","Wisconsin","Illinois"];
             var states2lower = ["new mexico","texas","oklahoma","kansas","nebraska","south dakota","north dakota","minnesota","wisconsin","illinois"];
@@ -53,7 +54,7 @@
                                   "Seven presidents were born in Ohio, making the state known as the \"Mother of Modern Presidents\". <br><br> Agriculture is Ohio’s largest industry: it contributes over $93 billion to the economy annually. <br><br> The state flag of Ohio is unique in a particular way—it’s the only flag out of all 50 states' that isn’t rectangular.",
                                   "The first hot air balloon in the US to carry a passenger launched from Baltimore, Maryland on June 23, 1784. <br><br> The first Ouija board was invented in Baltimore in an apartment that is now a 7-Eleven. <br><br> The first-ever six-pack of beer was sold in Maryland by the National Brewing Company.",
                                   "Delaware was the first state to ratify the Constitution on December 7, 1787, five days before any other province or colony. <br><br> Delaware enjoys the fastest Internet speeds in the country, with connection speeds higher than every other country observed with the exception of South Korea. <br><br> An insect species, the Bethany Beach firefly, can only be found in Delaware.",
-                                  "The first baseball stadium was built in Pittsburgh, Pennsylvania in 1909. <br><br> Benjamin Franklin inaugurated the country’s first public zoo in Philadelphia. <br><br> The nation’s first hospital was the Philadelphia Hospital."];
+                                  "The first baseball stadium was built in Pittsburgh, Pennsylvania in 1909. <br><br> Benjamin Franklin inaugurated the country\'s first public zoo in Philadelphia, Pennsylvania. <br><br> The nation\'s first hospital was the Philadelphia Hospital."];
 
       var states5 = ["New Jersey","New York","Connecticut","Rhode Island","Massachusetts","Vermont","New Hampshire","Maine","Alaska","Hawaii"];
             var states5lower = ["new jersey","new york","connecticut","rhode island","massachusetts","vermont","new hampshire","maine","alaska","hawaii"];
@@ -158,22 +159,37 @@
 
       #generate{
         font-size: 20px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 1px 9px;
+        border: 1px solid black;
+        font-family: Times;
       }
 
-      .button {
+      #generate:hover{
+        background-color: yellow;
+      }
+
+      #quiz{
         border: 1px solid black;
-        background-color: #e7e7e7;
+        background-color: white;
         color: black;
-        padding: 2px 20px;
+        padding: 1px 10px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-        border-radius: 3px;
+        border-radius: 4px;
         font-size:20px;
-    }
+     }
+
+      #quiz:hover{
+        background-color: tomato;
+        color: white;
+      }
+
     </style>
   </head>
 
@@ -182,8 +198,8 @@
     <p id="title">Find out some interesting facts about states in the USA!</p>
     <p>Type in the name of a state to find unique facts about it! <br> When you are done learning some new facts, click the Test Your Knowledege button to take a quiz to see how well you remember your facts!</p>
     <input id="input" type="text" onfocus="this.value=''">
-    <input id="generate" value="Find facts!" type="button" onclick="factFinder()">
-    <a class="button" href="extension.html" target="_blank">Test Your Knowledge</a>
+    <input id="generate" value="Find Facts" type="button" onclick="factFinder()">
+    <a id="quiz" href="extension.html" target="_blank">Test Your Knowledge</a>
     <hr><br><br><br><br><br><br><br>
     <span id="span"></span>
 <!--    <span id = "pic"></span> -->
