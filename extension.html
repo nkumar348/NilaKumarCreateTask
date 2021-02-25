@@ -19,7 +19,7 @@
 
         if (input == "" ) {
           document.getElementById('span').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 1" ) {
+        } else if ( input == "New Jersey" ) {
           document.getElementById('span').innerHTML = 'Answer is correct!';
           document.getElementById('span').style.backgroundColor = 'lightgreen';
           score++;
@@ -39,7 +39,7 @@
 
         if (input == "" ) {
           document.getElementById('span2').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 2" ) {
+        } else if ( input == "Ohio" ) {
           document.getElementById('span2').innerHTML = 'Answer is correct!';
           document.getElementById('span2').style.backgroundColor = 'lightgreen';
           score++;
@@ -59,7 +59,7 @@
 
         if (input == "" ) {
           document.getElementById('span3').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 3" ) {
+        } else if ( input == "Iowa" ) {
           document.getElementById('span3').innerHTML = 'Answer is correct!';
           document.getElementById('span3').style.backgroundColor = 'lightgreen';
           score++;
@@ -78,7 +78,7 @@
         }
         if (input == "" ) {
           document.getElementById('span4').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 4" ) {
+        } else if ( input == "Alabama" ) {
           document.getElementById('span4').innerHTML = 'Answer is correct!';
           document.getElementById('span4').style.backgroundColor = 'lightgreen';
           score++;
@@ -97,7 +97,7 @@
         }
         if (input == "" ) {
           document.getElementById('span5').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 1" ) {
+        } else if ( input == "North Dakota" ) {
           document.getElementById('span5').innerHTML = 'Answer is correct!';
           document.getElementById('span5').style.backgroundColor = 'lightgreen';
           score++;
@@ -116,7 +116,7 @@
         }
         if (input == "" ) {
           document.getElementById('span6').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 2" ) {
+        } else if ( input == "Colorado" ) {
           document.getElementById('span6').innerHTML = 'Answer is correct!';
           document.getElementById('span6').style.backgroundColor = 'lightgreen';
           score++;
@@ -135,7 +135,7 @@
         }
         if (input == "" ) {
           document.getElementById('span7').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 3" ) {
+        } else if ( input == "Tennessee" ) {
           document.getElementById('span7').innerHTML = 'Answer is correct!';
           document.getElementById('span7').style.backgroundColor = 'lightgreen';
           score++;
@@ -154,7 +154,7 @@
         }
         if (input == "" ) {
           document.getElementById('span8').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 4" ) {
+        } else if ( input == "Pennsylvania" ) {
           document.getElementById('span8').innerHTML = 'Answer is correct!';
           document.getElementById('span8').style.backgroundColor = 'lightgreen';
           score++;
@@ -173,7 +173,7 @@
         }
         if (input == "" ) {
           document.getElementById('span9').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 1" ) {
+        } else if ( input == "Nebraska" ) {
           document.getElementById('span9').innerHTML = 'Answer is correct!';
           document.getElementById('span9').style.backgroundColor = 'lightgreen';
           score++;
@@ -192,7 +192,7 @@
         }
         if (input == "" ) {
           document.getElementById('span10').innerHTML = "Please select answer.";
-        } else if ( input == "Choice 2" ) {
+        } else if ( input == "Wyoming" ) {
           document.getElementById('span10').innerHTML = 'Answer is correct!';
           document.getElementById('span10').style.backgroundColor = 'lightgreen';
           score++;
@@ -223,113 +223,149 @@
       #feedback{
         font-size: 20px;
       }
+
+      form{
+        font-size: 20px;
+      }
+
+      #button, #final{
+        background-color: white;
+        border: 2px black solid;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      #span, #span2, #span3, #span4, #span5, #span6, #span7, #span8, #span9, #span10{
+        font-size: 17px;
+      }
+
+
     </style>
   </head>
 
   <body>
     <h1>USA States Quiz!</h1><br>
-
-          <h2>Question 1</h2>
-          <input type="radio" name="choice" value="Choice 1" > Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Which state has the highest population density in the country?</h2>
+      <form>
+          <input type="radio" name="choice" value="New York" > New York
+          <input type="radio" name="choice" value="New Jersey"> New Jersey
+          <input type="radio" name="choice" value="Georgia"> Georgia
+          <input type="radio" name="choice" value="California"> California
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question1()">
+        <input id="button" type="button" value="Check Answer" onclick="question1()">
         <br><br> <span id="span"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 2</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Which state is known as the "Mother of Modern Presidents"?</h2>
+      <form>
+          <input type="radio" name="choice" value="Arizona"> Arizona
+          <input type="radio" name="choice" value="Vermont"> Vermont
+          <input type="radio" name="choice" value="Kentucky"> Kentucky
+          <input type="radio" name="choice" value="Ohio"> Ohio
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question2()">
+        <input id="button" type="button" value="Check Answer" onclick="question2()">
         <br><br> <span id="span2"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 3</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Which state has more hogs than humans?</h2>
+      <form>
+          <input type="radio" name="choice" value="Iowa"> Iowa
+          <input type="radio" name="choice" value="Nebraska"> Nebraska
+          <input type="radio" name="choice" value="Utah"> Utah
+          <input type="radio" name="choice" value="Rhode Island"> Rhode Island
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question3()">
+        <input id="button" type="button" value="Check Answer" onclick="question3()">
         <br><br> <span id="span3"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 4</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Which state is the only state to have an alcoholic beverage at its official drink?</h2>
+      <form>
+          <input type="radio" name="choice" value="Vermont"> Vermont
+          <input type="radio" name="choice" value="Alabama"> Alabama
+          <input type="radio" name="choice" value="California"> California
+          <input type="radio" name="choice" value="Missouri"> Missouri
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question4()">
+        <input id="button" type="button" value="Check Answer" onclick="question4()">
         <br><br> <span id="span4"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 5</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Where was the world's largest hamburger eaten?</h2>
+      <form>
+          <input type="radio" name="choice" value="Louisiana"> Louisiana
+          <input type="radio" name="choice" value="Minnesota"> Minnesota
+          <input type="radio" name="choice" value="North Dakota"> North Dakota
+          <input type="radio" name="choice" value="New Mexico"> New Mexico
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question5()">
+        <input id="button" type="button" value="Check Answer" onclick="question5()">
         <br><br> <span id="span5"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 6</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Which state is the only state in history to turn down the Olympics?</h2>
+      <form>
+          <input type="radio" name="choice" value="Maryland"> Maryland
+          <input type="radio" name="choice" value="Montana"> Montana
+          <input type="radio" name="choice" value="Colorado"> Colorado
+          <input type="radio" name="choice" value="Georgia"> Georgia
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question6()">
+        <input id="button" type="button" value="Check Answer" onclick="question6()">
         <br><br> <span id="span6"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 7</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Moutain Dew and Cotton Candy where invented in which state?</h2>
+      <form>
+          <input type="radio" name="choice" value="New York"> New York
+          <input type="radio" name="choice" value="Wyoming"> Wyoming
+          <input type="radio" name="choice" value="Maine"> Maine
+          <input type="radio" name="choice" value="Tennessee"> Tennessee
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question7()">
+        <input id="button" type="button" value="Check Answer" onclick="question7()">
         <br><br> <span id="span7"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 8</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Where was the nation's first hospital built?</h2>
+      <form>
+          <input type="radio" name="choice" value="Pennsylvania"> Pennsylvania
+          <input type="radio" name="choice" value="Virginia"> Virginia
+          <input type="radio" name="choice" value="North Carolina"> North Carolina
+          <input type="radio" name="choice" value="Massachusetts"> Massachusetts
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question8()">
+        <input id="button" type="button" value="Check Answer" onclick="question8()">
         <br><br> <span id="span8"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 9</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>Where is the world's largest indoor rainforest located?</h2>
+      <form>
+          <input type="radio" name="choice" value="California"> California
+          <input type="radio" name="choice" value="Texas"> Texas
+          <input type="radio" name="choice" value="Nebraska"> Nebraska
+          <input type="radio" name="choice" value="Arkansas"> Arkansas
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question9()">
+        <input id="button" type="button" value="Check Answer" onclick="question9()">
         <br><br> <span id="span9"></span>
 
     <br><br><hr><br><br>
-          <h2>Question 10</h2>
-          <input type="radio" name="choice" value="Choice 1"> Choice 1
-          <input type="radio" name="choice" value="Choice 2"> Choice 2
-          <input type="radio" name="choice" value="Choice 3"> Choice 3
-          <input type="radio" name="choice" value="Choice 4"> Choice 4
+          <h2>What was the first state to give women the right to vote?</h2>
+      <form>
+          <input type="radio" name="choice" value="West Virginia"> West Virginia
+          <input type="radio" name="choice" value="New Hampshire"> New Hampshire
+          <input type="radio" name="choice" value="Wyoming"> Wyoming
+          <input type="radio" name="choice" value="Delaware"> Delaware
+      </form>
     <br><br>
-        <input type="button" value="Check Answer" onclick="question10()">
+        <input id="button" type="button" value="Check Answer" onclick="question10()">
         <br><br> <span id="span10"></span>
 
     <br><br><hr><br><br>
-        <input type="button" value="View Results" onclick="displayScore()">
+        <input id="final" type="button" value="View Results" onclick="displayScore()">
         <br><br>
         <span id="score"></span>
         <br>
